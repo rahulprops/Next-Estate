@@ -1,3 +1,4 @@
+import RecentProperties from "@/components/home/RecentProperties";
 import SearchBox from "@/components/home/SearchBox";
 import FrontentLayout from "@/components/layouts/FrontentLayout";
 import Navbar from "@/components/navbar/Navbar";
@@ -39,6 +40,7 @@ export default function Home() {
        </div>
 
        </section>
+       <RecentProperties/>
     </FrontentLayout>
   );
 }
