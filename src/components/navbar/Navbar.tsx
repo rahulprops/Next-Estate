@@ -5,12 +5,13 @@ import { FaHome } from "react-icons/fa";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { navLinks } from "@/constants/navLinks";
 
  interface NavbarProps {
     variant?: "transparent" | "solid"
  }
 
- const navLinks = [ "Home " , " Properties", " MarketPlace"]
+//   export const navLinks = ["Home", "Properties", "MarketPlace"];
 
 export default function Navbar ( {variant="transparent"}:NavbarProps){
      const [isOpen, setIsOpen]=useState(false);
