@@ -56,6 +56,19 @@ export default function LoginModal() {
     setErrors(newErrros);
     return Object.keys(newErrros).length === 0;
   };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (!validate()) {
+    return;
+  }
+
+  setLoading(true);
+
+  // Login API call here
+
+  setLoading(false);
+};
 
   return (
     <Modal title="Login" onClose={closeLogin} isOpen={isLoginOpen}>
@@ -67,7 +80,7 @@ export default function LoginModal() {
         </h2>
         <p className=" text-sm text-gray-500">Login to your account</p>
       </div>
-      <form className=" space-y-8">
+      <form onSubmit={handleSubmit} className=" space-y-8">
         <Input
           id="login-email"
           name="email"

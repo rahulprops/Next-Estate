@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { navLinks } from "@/constants/navLinks";
 import { useAuthModal } from "@/store/useAuthModal";
+import { useCreatePropertyModalStore } from "@/store/useCreatePropertyModalStore";
 
  interface NavbarProps {
     variant?: "transparent" | "solid"
@@ -17,6 +18,7 @@ import { useAuthModal } from "@/store/useAuthModal";
 export default function Navbar ( {variant="transparent"}:NavbarProps){
      const [isOpen, setIsOpen]=useState(false);
      const { openLogin}=useAuthModal()
+     const {open:openCreateModal}=useCreatePropertyModalStore()
     const isTransparent = variant === "transparent"
     return (
         <section className={` top-0 left-0 z-50 w-full ${isTransparent ? "absolute" :" sticky border-b border-black/5 bg-card"}`}>
@@ -46,7 +48,7 @@ export default function Navbar ( {variant="transparent"}:NavbarProps){
                     <Button  variant="outline" onClick={openLogin}>
                         Login
                     </Button>
-                    <Button icon={<FaHome/>}  variant="outline">
+                    <Button icon={<FaHome/>}  onClick={openCreateModal} variant="outline">
                         Add Property
                     </Button>
                  </div>
@@ -70,7 +72,7 @@ export default function Navbar ( {variant="transparent"}:NavbarProps){
                    ))}
                    <div className=" flex flex-col gap-3 mt-4 mb-1 ml-1 mr-1">
                      <Button variant="outline" onClick={openLogin}>Login</Button>
-                     <Button variant="outline" > Add Property</Button>
+                     <Button variant="outline"  onClick={openCreateModal}> Add Property</Button>
 
                    </div>
                          </div>

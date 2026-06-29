@@ -1,0 +1,55 @@
+import { FaBuilding, FaHome, FaStore, FaWarehouse } from "react-icons/fa";
+import { LuBuilding, LuBuilding2, LuHotel, LuLandPlot, LuTrees } from "react-icons/lu";
+
+export const propertyTypes = [
+    {
+        label:"House",
+        icon:FaHome,
+        slug:"house"
+    },
+    {
+        label:"Apartment",
+        icon:FaBuilding,
+        slug:"apartment"
+    },
+    {
+        label:"villa",
+        icon:LuBuilding,
+        slug:"villa"
+    },
+    {
+        label:"Penthouse",
+        icon:LuBuilding2,
+        slug:"penthouse"
+    },
+    {
+        label:"Townhouse",
+        icon:LuTrees,
+        slug:"townhouse"
+    },
+    {
+        label:"Commerical",
+        icon:FaStore,
+        slug:"commerical"
+    },
+    {
+        label:"Office",
+        icon:LuBuilding2,
+        slug:"office"
+    },
+    {
+        label:"warehouse",
+        icon:FaWarehouse,
+        slug:"warehouse"
+    },
+    {
+        label:"Hotel",
+        icon:LuHotel,
+        slug:"hotel"
+    },
+    {
+        label:"Land",
+        icon:LuLandPlot,
+        slug:"land"
+    }
+];
