@@ -1,4 +1,5 @@
 import FrontentLayout from "@/components/layouts/FrontentLayout";
+import FilterButton from "@/components/marketPlace/FilterButton";
 import Navbar from "@/components/navbar/Navbar";
 import PropertyCard from "@/components/properties/PropertyCard";
 import Button from "@/components/ui/Button";
@@ -15,9 +16,7 @@ export default function MarketPlace (){
                     Explore
                 </h2>
 
-                <Button variant="outline" icon={<HiOutlineAdjustmentsHorizontal size={20}/>}>
-                    Filter
-                </Button>
+                <FilterButton/>
               </div>
 
                <div className=" grid gap-8 md:grid-cols-2 xl:grid-cols-3 my-4">
